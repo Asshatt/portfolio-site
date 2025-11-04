@@ -1,0 +1,213 @@
+/* component overrides */
+body
+{
+	font-family: 'Courier New', monospace;
+	margin: 0% 0%;
+	background-color: #f6f0e6;
+	font-size: 18px;
+	width: auto;
+}
+
+h1
+{
+	word-break: break-word;
+}
+
+a
+{
+	color: #ffa639;
+}
+
+img
+{
+	display: block;
+}
+
+/* base padding that everything inherits from */
+.base
+{
+	padding-left: 17%;
+	padding-right: 17%;
+}
+
+/* HEADERS */
+.ContentHeader
+{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background: #000000;
+	font-size: 150%;
+	color: white;
+}
+
+.MiniHeader
+{
+	padding-top: 0.1%;
+	padding-bottom: 0.1%;
+	background: #FFA639;
+	background: linear-gradient(180deg, rgba(255, 166, 57, 1) 95%, rgba(224, 128, 72, 1) 95%);
+}
+
+.ProjectHeader
+{
+	padding-top: 1%;
+	padding-bottom: 0.1%;
+	margin: 0 auto;
+	background: #FFA639;
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bolder;
+	font-size: 150%;
+}
+
+.ProjectHeaderInfo
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #FFA639;
+	background: linear-gradient(180deg, rgba(255, 166, 57, 1) 95%, rgba(224, 128, 72, 1) 95%);
+	padding-bottom: 1%;
+}
+
+/* Content Containers */
+.Content
+{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	text-align: left;
+	display: inline-block;
+}
+
+.CenteredImageContainer
+{
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 3%;
+}
+
+.CenteredImageContainer img
+{
+	width:100%;
+}
+
+.MultiImageContainer
+{
+	display: flex; 
+	justify-content: space-evenly;
+	padding-bottom: 2%;
+}
+
+.MultiImageContainer img
+{
+	max-width: 48%;
+}
+
+.InlineFlex
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.InlineFlex img
+{
+	width:auto; 
+	max-height: 460px;
+	min-width: none;
+	align-self: center;
+	margin-left: 5%;
+}
+
+.Footer
+{
+	background-color: #000000;
+	color: white;
+	font-size: 100%;
+	padding-top: 0.1%;
+	padding-bottom: 0.1%;
+	padding-left: 5%;
+	font-weight: bold;
+}
+
+/* youtube iframe weirdness */
+.IframeContainer
+{
+	width:60%;
+	margin: 0 auto;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+
+.IframeScaler
+{
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; 
+	height: 0;
+	margin: 0 auto;
+
+}
+
+.IframeScaler iframe
+{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* mobile adjustments */
+
+@media (max-width: 1000px) 
+{
+	.base
+	{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.IframeContainer
+	{
+		width:100%;
+	}
+
+	.InlineFlex 
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.InlineFlex img
+	{
+		margin-left: 0%;	
+		min-width: none;
+		max-inline-size: 100%;
+	}
+}
+
+@media (max-width: 500px)
+{
+	body
+	{
+		font-size: 4vw;
+	}
+
+	p
+	{
+		font-size: 5vw;
+	}
+
+	.MultiImageContainer
+	{
+		flex-direction: column;
+
+	}
+
+	.MultiImageContainer img
+	{
+		min-width: none;
+		margin: 1% auto;
+		max-width: 100%;
+	}
+}

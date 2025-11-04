@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="My portfolio site" />
+	<meta name="author" content="Jesus Roman S. Disini" />
+
+	<link rel="stylesheet" href="base.css">
+  <title>Jeremy Disini | Software Engineer</title>
+</head>
+
+<body>
+	<!-- Header + basic info -->
+	<div>
+		<div class="ContentHeader base">
+			<h1>Jeremy Disini</h1>
+			<p>Gameplay Programmer and Designer</p>
+		</div>
+		
+		<div class="MiniHeader base">
+			<h1>About</h1>
+		</div>
+		
+		<div class="Content InlineFlex base">
+			<p>
+				Hi, I'm Jeremy,
+				<br><br>
+				I am an aspiring game developer specializing in Gameplay and UX programming and design. 
+				I was born and raised in the Philippines and I'm currently based in Redmond, Washington, 
+				hoping to bring a fresh cultural perspective into the industry.
+				<br><br>
+				I am studying at the DigiPen Institute of Technology for a Bachelor's Degree in Computer Science 
+				and Game Design, and I'm currently on track to graduate in 2026.
+				<br><br>
+				I am most adept in programming and designing core gameplay systems and mechanics, 
+				as well as creating and maintaining tools to streamline the development process.
+				<br><br>
+				I also have skills in other areas such as sound design, music composition, 3D art and animation, and writing. 
+				If it's part of the game development process, I would surely have some experience in it.
+				<br><br>
+				I have a deep interest in video games as an art form, especially the interaction of storytelling with the 
+				dynamics of gameplay and how they evoke emotions that enhance human connections. It is my goal to push 
+				the art form forward through my work.
+			</p>
+			<img src="images/img_face.jpg">
+		</div>
+		
+		<div class="MiniHeader base">
+			<h1>Contact Info</h1>
+		</div>
+		<div class="Content base">
+			<p>
+			<b>Email:</b><br>
+			jesusromandisini@gmail.com<br><br>
+
+			<b>Contact No:</b><br>
+			+1-425-403-5303<br><br>
+
+			<b>Links:</b><br>
+			<b>
+			<a href="https://www.linkedin.com/in/jesus-roman-s-disini/">LinkedIn</a>
+			<a href="https://drive.google.com/file/d/1Bru1x_TfhDFS-Mz5ffDuUGyOsjYKJjzE/view?usp=sharing">Resume</a>
+			</b>
+			</p>
+		</div>
+	</div>
+	<!-- Projects -->
+	<div class="ContentHeader base">
+		<h1>Projects</h1>
+	</div>
+		
+	<!-- The Children Are Sleeping -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>The Children Are Sleeping</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+				<h3 style="text-align:left; width:30%;">Gameplay and UI Programmer, Audio Lead</h3>
+				<h3 style="text-align:right;">August 2024 - August 2025</h3>
+			</div>
+		
+		<div class="Content base">
+			<p>
+				The Children Are Sleeping is a 3rd person stealth horror game about a kid escaping a nightmare while 
+				being chased by a horse-like monster and grappling with the trauma of losing her father in war. 
+				<br><br> 
+				This game was developed in Unreal Engine 5. This project is more narrative driven than most of my 
+				previous team efforts, so many decisions end up being made by art and design, with tech having to 
+				adjust more to the ever changing requirements. As such, a lot of my time was spent figuring out ways 
+				to better support the needs and ambitions of our design team.
+			</p>
+			<h4>Note to self, re-record this video</h4>
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/5r3KADXK0n8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			<p>
+				I worked on this game for my junior game project alongside a team of 12 designers, artists, and other programmers.
+				<br><br>
+				I implemented a lot of the core mechanics of the game including the sanity/health mechanic that relies on light, and 
+				the basic stamina mechanics.
+				<br><br>
+				I also created a large portion of the player controller, with major functionality being controlled using C++. 
+				<br><br>
+				I collaborated heavily with our AI programmer to implement new gameplay features to the monster such as the ability to hear sounds 
+				from the player or the environment and  immediately moves towards them to investigate. I added in a throwable item mechanic to 
+				allow players to utilize this aspect of the monster to their advantage by making a sound to get it to move out of the way.
+				<br><br>
+				I was responsible for implementing many UX improvements based on playtester feedback, such as a light in the eyes of the monster that 
+				shows its cone of vision, and changes color when it sees the player.
+			</p>
+			<p>
+				I also implemented the point and click puzzle interface that facilitates much of the game's progression. It interfaces with the player's 
+				inventory, dynamically showing and hiding individual pieces depending on collected items. The system was designed to be inuitive for 
+				designers to work with, with movable pieces having a "key" attached which has a corresponding "lock" on a slot. If all keys are in 
+				the right place, the puzzle is registered as solved. This allowed for our designers to quickly conceptualize, implement, and iterate 
+				on different puzzle concepts. 
+				<br><br>
+				I implemented a myriad of menus for the purposes of player experience including the inventory checklist screen, the dynamic map screen 
+				with fog of war, the note glossary, and others, in collaboration with the team's artists and UX designer to ensure a high level of 
+				quality and usability. 
+			</p>
+			<div class = "MultiImageContainer">
+				<img src="images/tcas_map.png">
+				<img src="images/tcas_inventory.png">
+			</div>
+			<p>
+				Early in development, the design called for the ability to carry and drop items across levels to solve puzzles. To achieve this without 
+				making too many changes to our designers' workflow, I created a scene persistence system which could save relevant actor data for each 
+				level upon exiting, and load that data when re-entering the same room. This allowed the player to hold onto and move puzzle related 
+				items and keys around rooms without losing progress. The system also allowed for items to be brought between different levels to 
+				enable designers to create more complex puzzles that would require bringing physics objects back and forth between areas of the map. 
+				The system was designed to require as little manual input as possible, allowing designers and artists to create props and puzzles 
+				without having to worry too much about the underlying functionality. 
+			</p>
+			<p>
+				In addition to my role as a programmer, I was also the game's Audio Lead and the sole sound designer of the team. All the game's sound 
+				effects and ambience were mixed and mastered by me. I composed most of the music in the game, consisting currently of the title track, 
+				game over theme, and monster chase theme. I also arranged the credits song in collaboration with our producer. 
+				<br><br>
+				I am particularly proud of the final chase sequence, for which I did both the programming and sound design for, and collaborated closely 
+				with our environment artists to conceptualize and bring to life.
+			</p>
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/fCOXGxRy-7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			<p>
+				We are currently on the way to bringing the game to steam.
+			</p>
+		</div>
+	</div>
+
+	<!-- Top Down Combat -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>Top Down Combat Prototype</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+				<h3 style="text-align:left; width:30%;">Sole Developer</h3>
+				<h3 style="text-align:right;">April 2024 - Present</h3>
+			</div>
+		
+		<div class="Content base">
+			<p>
+				This project is a top down 2D action game inspired by Ultrakill and CrossCode. 
+				I created the prototype during the summer of 2024 in the Godot engine, and have 
+				been working away on it in my free time ever since.<br>
+			</p>	
+			
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/5r3KADXK0n8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<p>
+				I created this mostly as a passion project, and to refine my skills as a solo developer after 
+				primarily working on team projects for two years. I was inspired by games that I had been playing 
+				at the time, and with nothing to do over the summer, thought to try and see how my skills had 
+				improved since I started college.<br><br>
+				
+				I also took it as an opportunity to better learn the Godot Engine, a project that I had been keeping 
+				an eye on for a while. I believe this project helped bolster my general confidence and skill in all 
+				aspects of game development and reignited my passion for creative expression through games.
+			</p>
+
+			<div class="CenteredImageContainer base">
+				<img src="images/topdowncombat_1.png">
+			</div>
+
+			<p>
+				As this was a solo project, I was responsible for all aspects of development.
+				<br><br>
+				As the focus was on melee combat, I made sure to implement attacks and damage to be as modular as possible. 
+				All attacks are stored as custom resources (the Godot equivalent to Unity's serialized objects) that contain 
+				stats like damage, knockback, and ideal distance, and a reference to an animation to play on the attached actor. 
+				The actual triggering of attacks as well as cooldown timing is handled using the animation system, which allowed 
+				for me to precisely time frame data to animations. These attack objects are placed in a "combo" container, which 
+				allows for easy sequencing of attacks to be used both by the player and enemies. This system allowed me to easily 
+				iterate on enemy behaviors, as creating new attacks and modifying existing ones was as easy as changing some values 
+				in the inspector.
+				<br><br>
+				Enemy AI is handled as a finite state machine, with enemies switching between getting in range of the player and 
+				executing attacks. Enemies store a weighted table of attack patterns that can be edited in the inspector.
+				<br><br>
+				For testing purposes, I also implemented a basic telemetry system, tracking the time and specific events relevant to 
+				gameplay. This system allowed me to more quantifiably gauge things like which encounters players would get stuck on or 
+				spend too much time in, as well as diagnose any potential bugs if the data doesn't seem to behave as intended.
+				<br><br>
+				I made a point to focus on the user experience, adding in features like hitstop and dynamic camera zooms to make combat feel 
+				as satisfying as possible.
+				<br><br>
+				I created all character and monster designs, as well as all art assets used in the game. I made use of Blender to model and 
+				animate 3D characters and environments to speed up the development process, and rendered them as low resolution sprites with an 
+				amount of color filtering applied to achieve my desired art style. I also made significant use of Godot's 2D lighting system to 
+				provide a more atmospheric and dynamic feel to the visuals.
+				<br><br>
+				I composed and mixed the background music used in the demo, making use of an array of free VSTs to achieve my desired sound.
+			</p>
+		</div>
+	</div>
+
+	<!-- HexenHold -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>HexenHold</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+			<h3 style="text-align:left; width:30%;">Gameplay, Graphics, and Tools Programmer, Sound Designer</h3>
+			<h3 style="text-align:right;">August 2024 - August 2024</h3>
+		</div>
+		<div class="Content base">
+			<p>
+				HexenHold is a tower defense game where players defend an evil necromancer against ghosts 
+				and monsters as they try to disrupt the ritual. The game fuses tower defense gameplay with 
+				platforming elements, requiring players to run and jump around the stage placing towers and 
+				throwing enemies away from the necromancer.
+				<br><br>
+				My time with Hazard Stripes Productions was my first time working within an interdisciplinary team, 
+				after years of working either solo or with other programmers. A large part of my time was spent 
+				learning how to work and communicate with designers, and figuring out ways to make our toolset 
+				robust and accessible enough to allow for their expertise to truly shine. This project greatly 
+				helped my development both as a programmer, and as a team player.
+			</p>
+					
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/KnPmu54EIfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<p>
+				I worked on this project alongside other programmers and designers in team Hazard Stripes Productions. This 
+				game was developed as part of my sophomore year in the DigiPen Institute of Technology in fall 2023 and spring 2024.
+				<br><br>
+				HexenHold was developed using a custom engine written in C++ and utilizing OpenGL for graphics rendering. The engine 
+				made use of the ECS architectural pattern, where components are stored in individual cache coherent containers and 
+				read by systems that governed all functionality in the engine.
+			</p>
+			<div class = "MultiImageContainer">
+				<img src="images/hexenhold_gameplay.gif">
+				<img src="images/hexenhold_1.jpg">
+			</div>
+
+			<p>
+				I programmed the OpenGL 3.3 graphics backend using GLFW. The engine can display, rotate, and scale textured quads and 
+				has support for additive blending for certain lighting effects. I also implemented various structures to contain and 
+				serialize sprite data in order to make modifying and interfacing with this backend as user friendly as possible.
+				<br><br>
+				I also created a basic in-game ImGui editor with the ability to move and spawn entities on command, and modify specific 
+				entity attributes on the fly, to help programmers and designers test quicker.
+			</p>
+
+			<div class="CenteredImageContainer">
+				<img src="images/hexenhold_editor.gif" >
+			</div>
+			
+			<p>
+				I implemented a frame based animation system to allow for easier implementation of spritesheet based animations. 
+				Animation data is serialized in JSON format to allow for ease of use.
+				<br><br>
+				In addition, I also implemented a proper animation editor that allowed designers to create and edit animation 
+				timings while previewing them in real-time.
+			</p>
+			
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/oBklSCUZpgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<p>
+				I implemented an enemy wave editor to allow our systems designer to more easily iterate on the balance of enemy 
+				encounters in levels without having to directly interface with JSON files.
+				<br><br>
+				I also implemented Tiled integration, allowing levels created in Tiled to be exported as JSON files and read into 
+				the engine as level data. the engine supports placement of background tiles, color tints and parallax for individual 
+				layers, and the placement of entities into the level using Object Layers.
+				<br><br>
+				These features allowed our level and systems designers to more easily create and iterate on levels.
+			</p>
+
+			<div class="CenteredImageContainer">
+				<img src="images/hexenhold_tiled.png">
+			</div>
+
+			<p>
+				I implemented a lot of other miscellaneous systems for the engine, most notably a basic "tagging" system which allowed 
+				for strings to be attached to individual entities, which proved quite useful for implementing things like filtered 
+				collisions and projectile targeting.
+				<br><br>
+				I worked on other gameplay related functionality such as player control, enemy behaviors, and throwing interactions 
+				alongside our other gameplay programmer.
+				<br><br>
+				In addition, I handled implementation of the in-game tutorial to the custom engine, porting over functionality from 
+				the rough prototype created by the designers.
+				<br><br>
+				I also handled the implementation of a number of menu interfaces throughout the game, such as the in-game pause menu, 
+				and options menu.
+				<br><br>
+				I was the one responsible for editing together the game's trailer video, and also took it upon myself to compose all 
+				the original music heard in-game and in the trailer.
+				<br><br>
+				For the steam version of the game, I primarily worked on implementing controller support.
+			</p>
+		</div>
+	</div>
+
+	<!-- Interdimensional Tactical Chess -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>Interdimensional Tactical Chess</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+			<h3 style="text-align:left; width:30%;">Gameplay and UX Programmer</h3>
+			<h3 style="text-align:right;">January 2023 - April 2023</h3>
+		</div>
+
+		<div class="Content base">
+			<p>
+				Interdimensional Tactical Chess is a two player chess game played across four boards, 
+				each board being a parallel game of chess. Players have the ability to transfer chess 
+				pieces from one game to the other, allowing for unique and mind bending tactics. 
+				Whoever wins the most boards wins the game.
+			</p>
+
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/6Oa5WK3iw68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<p>
+				I worked on this project alongside three other programmers as part of team Magicats.
+				<br><br>
+				Interdimensional Tactical Chess was developed in a custom engine using a rudimentary 
+				graphics library provided by the university that was written in C.
+				<br><br>
+				I implemented all gameplay interactions with the chessboard, allowing players to examine 
+				and move chess pieces through and across boards. I was also largely responsible for UI 
+				implementation. I created move overlays, allowing players to see all valid moves both 
+				within the current chessboard, and across all parallel games, and handled dynamic drawing 
+				the internal chessboards onto the screen with tiles.
+				<br><br>
+				I handled implementation of audio using FMOD Core and created a handful of icons like the 
+				capture and move icons.
+			</p>
+		</div>
+	</div>
+
+	<!-- Pillbug Tower Defense -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>PillBug Tower Defense</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+			<h3 style="text-align:left; width:30%;">Gameplay and UX Programmer</h3>
+			<h3 style="text-align:right;">August 2022 - December 2022</h3>
+		</div>
+
+		<div class="Content base">
+			<p>
+				Pillbugs Tower Defense is a tower defense game where players must use acorns to defend 
+				a tree from waves of hostile pill bugs.
+			</p>
+			<div class="CenteredImageContainer">
+				<img src="images/PBTD_1.png">
+			</div>
+
+			<p>
+				I worked on this project alongside three other CS students as member of Untidy Judgement. 
+				The game was developed as part of my first semester in Digipen Institute of Technology in Fall 2022.
+				<br><br>
+				PBTD was developed over the course of 4 months using CProcessing, a C based port of the Processing graphic library.
+			</p>
+			<div class="InlineFlex">
+				<p>
+					I was the sole gameplay programmer on this team. I implemented all player interactions like buying, selling, and 
+					placing towers, and changing aiming modes.
+					<br><br>
+					I was partially responsible for balancing tower stats and enemy waves, collaborating with everyone else on the team 
+					to insure a level of quality.
+					<br><br>
+					I was largely responsible for programming and designing the user interface used during gameplay, and also designing the 
+					layout of the game's map.
+					<br><br>
+					I programmed the dynamic music system where the music would react to how many enemies were onscreen at a time. 
+					I also composed all these tracks myself.
+				</p>
+				<img src="images/PBTD_2.png">
+			</div>
+		</div>
+	</div>
+
+	<!-- Synthesized Anxiety -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>Synthesized Anxiety</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+			<h3 style="text-align:left; width:30%;">Sole Developer</h3>
+			<h3 style="text-align:right;">June 2021 - August 2021</h3>
+		</div>
+
+		<div class="base Content">
+			<p>
+				Synthesized Anxiety is a narrative focused turn based game that chronicles the story of Clef, 
+				a socially awkward music enthusiast who, against all odds, has found himself in the middle of 
+				the largest party in town. Time passes as more people approach him, each one proving to be a 
+				challenge for the natural shut in. The night is still young, and it's only a matter of time 
+				before everything melts down.
+			</p>
+
+			<div class="CenteredImageContainer">
+				<img src="images/synanx_1.png">
+			</div>
+
+			<p>
+				The game's mechanics and battle system were specifically designed to simulate the feeling of 
+				conversation for someone with anxiety, and was largely based on my own experience dealing with 
+				autism and social anxiety.
+				<br><br>
+				The goal of the game is to maximize your social status resource.
+				<br><br>
+				Each turn, you're given a dialogue prompt from a character and are able to verbally respond or react. 
+				You lose or gain social status based on if your response was socially acceptable. Certain responses 
+				will increase your stress meter, which if filled will cause a mental shutdown to occur.
+				<br><br>
+				During a mental shutdown, the current prompt will be garbled, making choosing an appropriate response 
+				more difficult. The player loses if they have 3 mental shutdowns.
+				<br><br>
+				Stress can be relieved by stimming once per turn. Each stim has a random chance of being noticed by your 
+				conversation partner, which can cause you to lose social status.
+			</p>
+			
+			<div class="MultiImageContainer">
+				<img src="images/synanx_2.png">
+				<img src="images/synanx_3.png">
+			</div>
+
+			<p>
+				The game was developed using Unity.
+				<br><br>
+				I was responsible for all the original music in the game as well as all art and UI assets.
+			</p>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="Footer">
+		<p>© 2025 Jesus Roman S. Disini</p>
+	</div>
+</body>
+</html>

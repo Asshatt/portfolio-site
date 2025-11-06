@@ -101,7 +101,8 @@ img
 .MultiImageContainer img
 {
 	width: 48%;
-	height: auto;
+	height: 48%;
+	display: block;
 }
 
 .InlineFlex

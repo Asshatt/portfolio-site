@@ -100,8 +100,8 @@ img
 
 .MultiImageContainer img
 {
-	width: 48%;
-	height: 48%;
+	max-width: 48%;
+	max-height: 48%;
 	display: block;
 }
 
@@ -186,6 +186,18 @@ img
 		min-width: none;
 		max-inline-size: 100%;
 	}
+	.MultiImageContainer
+	{
+		flex-direction: column;
+	
+	}
+	
+	.MultiImageContainer img
+	{
+		min-width: none;
+		margin: 1% auto;
+		max-width: 100%;
+	}
 }
 
 @media (max-width: 500px)
@@ -200,16 +212,4 @@ img
 		font-size: 5vw;
 	}
 
-	.MultiImageContainer
-	{
-		flex-direction: column;
-
-	}
-
-	.MultiImageContainer img
-	{
-		min-width: none;
-		margin: 1% auto;
-		max-width: 100%;
-	}
 }

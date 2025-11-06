@@ -134,6 +134,112 @@
 			</p>
 		</div>
 	</div>
+	
+	<!-- HexenHold -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>HexenHold</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+			<h3 style="text-align:left; width:30%;">Gameplay, Graphics, and Tools Programmer, Sound Designer</h3>
+			<h3 style="text-align:right;">August 2024 - August 2024</h3>
+		</div>
+		<div class="Content base">
+			<p>
+				HexenHold is a tower defense game where players defend an evil necromancer against ghosts 
+				and monsters as they try to disrupt the ritual. The game fuses tower defense gameplay with 
+				platforming elements, requiring players to run and jump around the stage placing towers and 
+				throwing enemies away from the necromancer.
+				<br><br>
+				I worked on this game as a member of Hazard Stripes Productions, an interdisciplinary team formed 
+				during my sophomore game class. A large part of my time was spent working and communicating with designers, 
+				and figuring out ways to make our engine tools more robust and accessible to allow for their expertise to 
+				truly shine. This project greatly helped my development both as a programmer, and as a team player.
+			</p>
+					
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/KnPmu54EIfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<p>
+				HexenHold was developed using a custom engine written in C++ and utilizing OpenGL for graphics rendering. The engine 
+				made use of the ECS architectural pattern, where components are stored in individual cache coherent containers and 
+				read by systems that governed all functionality in the engine. This was done for learning purposes, as well as to
+				improve performance to facilitate the large waves of enemies typically expected of a tower defense game.
+			</p>
+			<div class = "MultiImageContainer">
+				<img src="images/hexenhold_gameplay.gif">
+				<img src="images/hexenhold_1.jpg">
+			</div>
+
+			<p>
+				I programmed the OpenGL 3.3 graphics backend using GLFW. The engine can display, rotate, and scale textured quads and 
+				has support for additive blending for certain lighting effects. I also implemented various structures to contain and 
+				serialize sprite data in order to make modifying and interfacing with this backend as user friendly as possible.
+				<br><br>
+				I also created a basic in-game ImGui editor with the ability to move and spawn entities on command, and modify specific 
+				entity attributes on the fly. This was created to help programmers and designers iterate on ideas faster without having
+				to modify the engine code.
+			</p>
+
+			<div class="CenteredImageContainer">
+				<img src="images/hexenhold_editor.gif" >
+			</div>
+			
+			<p>
+				I implemented a frame based animation system to allow for easier implementation of spritesheet based animations. 
+				Animation data is serialized in JSON format to allow for ease of use.
+				<br><br>
+				Using this implementation, I created a proper animation editor that allowed designers to create and edit animation 
+				timings while previewing them in real-time. This editor took a lot of inspiration from the Unity animation editor,
+				as it was what our designers were most accustomed to at the time. Over the course of the project, I updated and
+				mantained this editor, modify and adding featurees according to feedback from the team's animator and sprite artist.
+			</p>
+			
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/oBklSCUZpgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<p>
+				I implemented an enemy wave editor to allow our systems designer to more easily iterate on the balance of enemy 
+				encounters in levels without having to directly interface with JSON files.
+				<br><br>
+				I also implemented Tiled integration, allowing levels created in Tiled to be exported as JSON files and read into 
+				the engine as level data. the engine supports placement of background tiles, color tints and parallax for individual 
+				layers, and the placement of entities into the level using Object Layers.
+				<br><br>
+				These features allowed our level and systems designers to more easily create and iterate on levels.
+			</p>
+
+			<div class="CenteredImageContainer">
+				<img src="images/hexenhold_tiled.png">
+			</div>
+
+			<p>
+				I implemented a lot of other miscellaneous systems for the engine, most notably a basic "tagging" system which allowed 
+				for strings to be attached to individual entities, which proved quite useful for implementing things like filtered 
+				collisions and projectile targeting.
+				<br><br>
+				I worked on other gameplay related functionality such as player control, enemy behaviors, and throwing interactions 
+				alongside our other gameplay programmer.
+				<br><br>
+				In addition, I handled implementation of the in-game tutorial to the custom engine, porting over functionality from 
+				the rough prototype created by the designers.
+				<br><br>
+				I also handled the implementation of a number of menu interfaces throughout the game, such as the in-game pause menu, 
+				and options menu.
+				<br><br>
+				I was the one responsible for editing together the game's trailer video, and also took it upon myself to compose all 
+				the original music heard in-game and in the trailer.
+				<br><br>
+				For the steam version of the game, I primarily worked on implementing controller support.
+			</p>
+		</div>
+	</div>
 
 	<!-- The Children Are Sleeping -->
 	<div>
@@ -288,112 +394,6 @@
 				provide a more atmospheric and dynamic feel to the visuals.
 				<br><br>
 				I composed and mixed the background music used in the demo, making use of an array of free VSTs to achieve my desired sound.
-			</p>
-		</div>
-	</div>
-
-	<!-- HexenHold -->
-	<div>
-		<div class="base ProjectHeader">
-			<h1>HexenHold</h1>
-		</div>
-		<div class="ProjectHeaderInfo base">
-			<h3 style="text-align:left; width:30%;">Gameplay, Graphics, and Tools Programmer, Sound Designer</h3>
-			<h3 style="text-align:right;">August 2024 - August 2024</h3>
-		</div>
-		<div class="Content base">
-			<p>
-				HexenHold is a tower defense game where players defend an evil necromancer against ghosts 
-				and monsters as they try to disrupt the ritual. The game fuses tower defense gameplay with 
-				platforming elements, requiring players to run and jump around the stage placing towers and 
-				throwing enemies away from the necromancer.
-				<br><br>
-				My time with Hazard Stripes Productions was my first time working within an interdisciplinary team, 
-				after years of working either solo or with other programmers. A large part of my time was spent 
-				learning how to work and communicate with designers, and figuring out ways to make our toolset 
-				robust and accessible enough to allow for their expertise to truly shine. This project greatly 
-				helped my development both as a programmer, and as a team player.
-			</p>
-					
-			<div class="IframeContainer">
-				<div class="IframeScaler">
-					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/KnPmu54EIfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div>
-			
-			<p>
-				I worked on this project alongside other programmers and designers in team Hazard Stripes Productions. This 
-				game was developed as part of my sophomore year in the DigiPen Institute of Technology in fall 2023 and spring 2024.
-				<br><br>
-				HexenHold was developed using a custom engine written in C++ and utilizing OpenGL for graphics rendering. The engine 
-				made use of the ECS architectural pattern, where components are stored in individual cache coherent containers and 
-				read by systems that governed all functionality in the engine.
-			</p>
-			<div class = "MultiImageContainer">
-				<img src="images/hexenhold_gameplay.gif">
-				<img src="images/hexenhold_1.jpg">
-			</div>
-
-			<p>
-				I programmed the OpenGL 3.3 graphics backend using GLFW. The engine can display, rotate, and scale textured quads and 
-				has support for additive blending for certain lighting effects. I also implemented various structures to contain and 
-				serialize sprite data in order to make modifying and interfacing with this backend as user friendly as possible.
-				<br><br>
-				I also created a basic in-game ImGui editor with the ability to move and spawn entities on command, and modify specific 
-				entity attributes on the fly, to help programmers and designers test quicker.
-			</p>
-
-			<div class="CenteredImageContainer">
-				<img src="images/hexenhold_editor.gif" >
-			</div>
-			
-			<p>
-				I implemented a frame based animation system to allow for easier implementation of spritesheet based animations. 
-				Animation data is serialized in JSON format to allow for ease of use.
-				<br><br>
-				In addition, I also implemented a proper animation editor that allowed designers to create and edit animation 
-				timings while previewing them in real-time.
-			</p>
-			
-			<div class="IframeContainer">
-				<div class="IframeScaler">
-					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/oBklSCUZpgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div>
-
-			<p>
-				I implemented an enemy wave editor to allow our systems designer to more easily iterate on the balance of enemy 
-				encounters in levels without having to directly interface with JSON files.
-				<br><br>
-				I also implemented Tiled integration, allowing levels created in Tiled to be exported as JSON files and read into 
-				the engine as level data. the engine supports placement of background tiles, color tints and parallax for individual 
-				layers, and the placement of entities into the level using Object Layers.
-				<br><br>
-				These features allowed our level and systems designers to more easily create and iterate on levels.
-			</p>
-
-			<div class="CenteredImageContainer">
-				<img src="images/hexenhold_tiled.png">
-			</div>
-
-			<p>
-				I implemented a lot of other miscellaneous systems for the engine, most notably a basic "tagging" system which allowed 
-				for strings to be attached to individual entities, which proved quite useful for implementing things like filtered 
-				collisions and projectile targeting.
-				<br><br>
-				I worked on other gameplay related functionality such as player control, enemy behaviors, and throwing interactions 
-				alongside our other gameplay programmer.
-				<br><br>
-				In addition, I handled implementation of the in-game tutorial to the custom engine, porting over functionality from 
-				the rough prototype created by the designers.
-				<br><br>
-				I also handled the implementation of a number of menu interfaces throughout the game, such as the in-game pause menu, 
-				and options menu.
-				<br><br>
-				I was the one responsible for editing together the game's trailer video, and also took it upon myself to compose all 
-				the original music heard in-game and in the trailer.
-				<br><br>
-				For the steam version of the game, I primarily worked on implementing controller support.
 			</p>
 		</div>
 	</div>

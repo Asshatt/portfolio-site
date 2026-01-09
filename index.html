@@ -7,7 +7,7 @@
 	<meta name="author" content="Jesus Roman S. Disini" />
 
 	<link rel="stylesheet" href="base.css">
-  <title>Jeremy Disini | Software Engineer</title>
+  <title>Jeremy Disini | Gameplay and Tools Programmer with Design Experience</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 	<div>
 		<div class="ContentHeader base">
 			<h1>Jeremy Disini</h1>
-			<p>Gameplay Programmer and Designer</p>
+			<p>Gameplay and Tools Programmer with Design Experience</p>
 		</div>
 		
 		<div class="MiniHeader base">
@@ -205,6 +205,81 @@
 		</div>
 	</div>
 
+	<!-- Top Down Combat -->
+	<div>
+		<div class="base ProjectHeader">
+			<h1>Top Down Combat Prototype</h1>
+		</div>
+		<div class="ProjectHeaderInfo base">
+				<h3 style="text-align:left; width:30%;">Sole Developer</h3>
+				<h3 style="text-align:right;">April 2024 - Present</h3>
+			</div>
+		
+		<div class="Content base">
+			<p>
+				This project is a top down 2D action game inspired by Ultrakill and CrossCode. 
+				I created the prototype during the summer of 2024 in the Godot engine, and have 
+				been working away on it in my free time ever since.<br>
+			</p>	
+			
+			<div class="IframeContainer">
+				<div class="IframeScaler">
+					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/5r3KADXK0n8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<p>
+				I created this mostly as a passion project, and to refine my skills as a solo developer after 
+				primarily working on team projects for two years. I was inspired by games that I had been playing 
+				at the time, and with nothing to do over the summer, thought to try and see how my skills had 
+				improved since I started college.<br><br>
+				
+				I also took it as an opportunity to better learn the Godot Engine, a project that I had been keeping 
+				an eye on for a while. I believe this project helped bolster my general confidence and skill in all 
+				aspects of game development and reignited my passion for creative expression through games.
+			</p>
+
+			<div class="CenteredImageContainer base">
+				<img src="images/topdowncombat_1.png">
+			</div>
+
+			<p>
+				As this was a solo project, I was responsible for all aspects of development.
+				<br><br>
+				As the focus was on melee combat, I made sure to implement attacks and damage to be as modular as possible. 
+				All attacks are stored as custom resources (the Godot equivalent to Unity's serialized objects) that contain 
+				stats like damage, knockback, and ideal distance, and a reference to an animation to play on the attached actor. 
+				The actual triggering of attacks as well as cooldown timing is handled using the animation system, which allowed 
+				for me to precisely time frame data to animations. These attack objects are placed in a "combo" container, which 
+				allows for easy sequencing of attacks to be used both by the player and enemies. This system allowed me to easily 
+				iterate on enemy behaviors, as creating new attacks and modifying existing ones was as easy as changing some values 
+				in the inspector.
+				<br><br>
+				Enemy AI is handled as a finite state machine, with enemies switching between getting in range of the player and 
+				executing attacks. Enemies store a weighted table of attack patterns that can be edited in the inspector.
+				<br><br>
+				For testing purposes, I also implemented a basic telemetry system, tracking the time and specific events relevant to 
+				gameplay. This system allowed me to more quantifiably gauge things like which encounters players would get stuck on or 
+				spend too much time in, as well as diagnose any potential bugs if the data doesn't seem to behave as intended.
+			</p>
+			<div class="MultiImageContainer base">
+				<img src="images/topdowncombat_3.png">
+				<img src="images/topdowncombat_2.png">
+			</div>
+			<p>
+				I made a point to focus on the user experience, adding in features like hitstop and dynamic camera zooms to make combat feel 
+				as satisfying as possible.
+				<br><br>
+				I created all character and monster designs, as well as all art assets used in the game. I made use of Blender to model and 
+				animate 3D characters and environments to speed up the development process, and rendered them as low resolution sprites with an 
+				amount of color filtering applied to achieve my desired art style. I also made significant use of Godot's 2D lighting system to 
+				provide a more atmospheric and dynamic feel to the visuals.
+				<br><br>
+				I composed and mixed the background music used in the demo, making use of an array of free VSTs to achieve my desired sound.
+			</p>
+		</div>
+	</div>
+
 	<!-- The Children Are Sleeping -->
 	<div>
 		<div class="base ProjectHeader">
@@ -292,80 +367,6 @@
 		</div>
 	</div>
 
-	<!-- Top Down Combat -->
-	<div>
-		<div class="base ProjectHeader">
-			<h1>Top Down Combat Prototype</h1>
-		</div>
-		<div class="ProjectHeaderInfo base">
-				<h3 style="text-align:left; width:30%;">Sole Developer</h3>
-				<h3 style="text-align:right;">April 2024 - Present</h3>
-			</div>
-		
-		<div class="Content base">
-			<p>
-				This project is a top down 2D action game inspired by Ultrakill and CrossCode. 
-				I created the prototype during the summer of 2024 in the Godot engine, and have 
-				been working away on it in my free time ever since.<br>
-			</p>	
-			
-			<div class="IframeContainer">
-				<div class="IframeScaler">
-					<iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/5r3KADXK0n8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div>
-			
-			<p>
-				I created this mostly as a passion project, and to refine my skills as a solo developer after 
-				primarily working on team projects for two years. I was inspired by games that I had been playing 
-				at the time, and with nothing to do over the summer, thought to try and see how my skills had 
-				improved since I started college.<br><br>
-				
-				I also took it as an opportunity to better learn the Godot Engine, a project that I had been keeping 
-				an eye on for a while. I believe this project helped bolster my general confidence and skill in all 
-				aspects of game development and reignited my passion for creative expression through games.
-			</p>
-
-			<div class="CenteredImageContainer base">
-				<img src="images/topdowncombat_1.png">
-			</div>
-
-			<p>
-				As this was a solo project, I was responsible for all aspects of development.
-				<br><br>
-				As the focus was on melee combat, I made sure to implement attacks and damage to be as modular as possible. 
-				All attacks are stored as custom resources (the Godot equivalent to Unity's serialized objects) that contain 
-				stats like damage, knockback, and ideal distance, and a reference to an animation to play on the attached actor. 
-				The actual triggering of attacks as well as cooldown timing is handled using the animation system, which allowed 
-				for me to precisely time frame data to animations. These attack objects are placed in a "combo" container, which 
-				allows for easy sequencing of attacks to be used both by the player and enemies. This system allowed me to easily 
-				iterate on enemy behaviors, as creating new attacks and modifying existing ones was as easy as changing some values 
-				in the inspector.
-				<br><br>
-				Enemy AI is handled as a finite state machine, with enemies switching between getting in range of the player and 
-				executing attacks. Enemies store a weighted table of attack patterns that can be edited in the inspector.
-				<br><br>
-				For testing purposes, I also implemented a basic telemetry system, tracking the time and specific events relevant to 
-				gameplay. This system allowed me to more quantifiably gauge things like which encounters players would get stuck on or 
-				spend too much time in, as well as diagnose any potential bugs if the data doesn't seem to behave as intended.
-			</p>
-			<div class="MultiImageContainer base">
-				<img src="images/topdowncombat_3.png">
-				<img src="images/topdowncombat_2.png">
-			</div>
-			<p>
-				I made a point to focus on the user experience, adding in features like hitstop and dynamic camera zooms to make combat feel 
-				as satisfying as possible.
-				<br><br>
-				I created all character and monster designs, as well as all art assets used in the game. I made use of Blender to model and 
-				animate 3D characters and environments to speed up the development process, and rendered them as low resolution sprites with an 
-				amount of color filtering applied to achieve my desired art style. I also made significant use of Godot's 2D lighting system to 
-				provide a more atmospheric and dynamic feel to the visuals.
-				<br><br>
-				I composed and mixed the background music used in the demo, making use of an array of free VSTs to achieve my desired sound.
-			</p>
-		</div>
-	</div>
 
 	<!-- Interdimensional Tactical Chess -->
 	<div>

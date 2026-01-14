@@ -46,13 +46,16 @@ button
 
 .Collapsible::before
 {
-	content: "►";
+	content: "▼";
+	transition: 0.2s;
+	rotate: 0;
 	font-size: 150%;
 }
 
 .Expanded::before
 {
-	content: "▼";
+	rotate: -90deg;
+	transition: 0.2s;
 	font-size: 150%;
 }
 

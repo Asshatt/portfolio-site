@@ -32,11 +32,11 @@ button
 .Collapsible
 {
 	width: 100%;
-	text-align: left;
-	background-color: black;
-	color: white;
 	border: none;
 	outline: none;
+	display: flex;
+	align-items: center;
+	gap:1%;
 }
 
 .Collapsible:hover
@@ -44,11 +44,23 @@ button
 	background: linear-gradient(180deg,rgba(36, 36, 36, 1) 95%, rgba(36, 36, 36, 1) 50%, rgba(84, 84, 84, 1) 95%);
 }
 
+.Collapsible::before
+{
+	content: "▼";
+	font-size: 150%;
+}
+
+.Expanded::before
+{
+	content: "►";
+	font-size: 150%;
+}
+
 .CollapsibleSection
 {
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.25s ease-in;
+	transition: max-height 0.25s ease-in-out;
 }
 
 /* base padding that everything inherits from */
@@ -63,7 +75,9 @@ button
 {
 	padding-top: 2%;
 	padding-bottom: 2%;
-	background: linear-gradient(180deg,rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 1) 50%, rgba(54, 54, 54, 1) 95%);	font-size: 150%;
+	text-align: left;
+	background: linear-gradient(180deg,rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 1) 50%, rgba(54, 54, 54, 1) 95%);	
+	font-size: 100%;
 	color: white;
 }
 

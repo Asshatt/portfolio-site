@@ -23,6 +23,34 @@ img
 	display: block;
 }
 
+button
+{
+	font-family: 'Courier New', monospace;
+	word-break: break-word;
+}
+
+.Collapsible
+{
+	width: 100%;
+	text-align: left;
+	background-color: black;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+.Collapsible:hover
+{
+	background: linear-gradient(180deg,rgba(36, 36, 36, 1) 95%, rgba(36, 36, 36, 1) 50%, rgba(84, 84, 84, 1) 95%);
+}
+
+.CollapsibleSection
+{
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.25s ease-in;
+}
+
 /* base padding that everything inherits from */
 .base
 {
@@ -35,8 +63,7 @@ img
 {
 	padding-top: 2%;
 	padding-bottom: 2%;
-	background: #000000;
-	font-size: 150%;
+	background: linear-gradient(180deg,rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 1) 50%, rgba(54, 54, 54, 1) 95%);	font-size: 150%;
 	color: white;
 }
 

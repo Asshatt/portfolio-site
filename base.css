@@ -1,7 +1,7 @@
 /* component overrides */
 body
 {
-	font-family: 'Courier New', monospace;
+	font-family: monospace;
 	margin: 0% 0%;
 	background-color: #f6f0e6;
 	font-size: 18px;
@@ -25,7 +25,7 @@ img
 
 button
 {
-	font-family: 'Courier New', monospace;
+	font-family: monospace;
 	word-break: break-word;
 }
 

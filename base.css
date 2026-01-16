@@ -35,19 +35,30 @@ button
 	border: none;
 	outline: none;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	gap:1%;
+	background: linear-gradient(180deg, rgba(255, 166, 57, 1) 50%, rgba(224, 128, 72, 1) 50%);
+	transition: font-size 0.2s;
+	font-size: 100%;
+}
+
+.Expanded
+{
+	font-size: 150%;
+	background: #FFA639;
+	transition: font-size 0.2s;
 }
 
 .Collapsible:hover
-{
-	background: linear-gradient(180deg,rgba(36, 36, 36, 1) 95%, rgba(36, 36, 36, 1) 50%, rgba(84, 84, 84, 1) 95%);
+{	
+	background: linear-gradient(0deg, rgba(255, 166, 57, 1) 0%, rgba(255, 183, 116, 1) 90%);
 }
 
 .Collapsible::before
 {
 	content: "▼";
-	transition: 0.2s;
+	transition: rotate 0.2s;
 	rotate: 0;
 	font-size: 150%;
 }
@@ -55,7 +66,7 @@ button
 .Expanded::before
 {
 	rotate: -90deg;
-	transition: 0.2s;
+	transition: rotate 0.2s;
 	font-size: 150%;
 }
 
@@ -101,7 +112,6 @@ button
 	text-align: center;
 	text-decoration: underline;
 	font-weight: bolder;
-	font-size: 150%;
 }
 
 .ProjectHeaderInfo
